@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="integration" />
+        <module name="payflex-api-payment" />
+        <module name="payflex-api-member" />
+        <module name="payflex-api-report" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="payflex-api-shipping" target="1.5" />
+      <module name="payflex-api-shipping-amazon" target="1.5" />
+      <module name="payflex-api-shipping-dhl" target="1.5" />
+      <module name="payflex-api-shipping-others" target="1.5" />
+      <module name="payflex-api-shipping-ups" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="integration" options="-parameters" />
+      <module name="payflex-api-member" options="-parameters" />
+      <module name="payflex-api-payment" options="-parameters" />
+      <module name="payflex-api-report" options="-parameters" />
+    </option>
+  </component>
+</project>
