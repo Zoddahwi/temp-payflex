@@ -1,0 +1,41 @@
+Server:
+  port: 9091
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: ops-user-service
+          uri: lb://OPS-USER-SERVICE
+          predicates:
+            - Path=/api/v1/user-service/**
+        - id: ops-member-service
+          uri: lb://OPS-MEMBER-SERVICE
+          predicates:
+            - Path=/api/v1/member-service/**
+        - id: discovery-service
+          uri: lb://DISCOVERY-SERVICE
+          predicates:
+            - Path=/api/v1/discovery-service/**
+        - id: ops-api-gateway
+          uri: lb://OPS-API-GATEWAY
+          predicates:
+            - Path=/api/v1/api-gateway/**
+        - id: ops-payment-service
+          uri: lb://OPS-PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payment-service/**
+        - id: ops-report-service
+          uri: lb://OPS-REPORT-SERVICE
+          predicates:
+            - Path=/api/v1/report-service/**
+        - id: integration-service
+          uri: lb://INTEGRATION-SERVICE
+          predicates:
+            - Path=/api/v1/integration-service/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
