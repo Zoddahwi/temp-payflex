@@ -1,29 +1,49 @@
 package com.fintechedge.payflex.model;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.UUID;
 
-@Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
-@Table(name= "USERS", schema = "member")
+@Table("tbl_user")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id ;
+    @Column("id")
+    private UUID id;
+    @Column("first_name")
     private String firstName;
+    @Column("last_name")
     private String lastName;
-    private String staffID;
+    @Column("staffId")
+    private String staffId;
+    @Column("email_address")
     private String emailAddress;
+    @Column("employer")
     private String employer;
+    @Column("mobile_number")
     private String mobileNumber;
+    @Column("account_number")
     private String accountNumber;
+    @Column("destination_bank")
+    private String destinationBank;
+    @Column("salary")
+    private String salary;
+    @Column("destination_telco")
+    private String destinationTelco;
 
-    private boolean enabled;
+    public User(UUID uuid, String userId, String wise, String s, String mail) {
+    }
+
+//    public User(UUID uuid, String userId, String wise, String s, String mail) {
+//    }
 }

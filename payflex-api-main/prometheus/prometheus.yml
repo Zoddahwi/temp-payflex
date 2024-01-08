@@ -1,0 +1,35 @@
+global:
+  scrape_interval: 10s
+  evaluation_interval: 10s
+
+scrape_configs:
+  - job_name: 'member_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['member-service:8081']
+        labels:
+          application: 'Member Service Application'
+  - job_name: 'payment_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['payment-service:8080']
+        labels:
+          application: 'Payment Service Application'
+  - job_name: 'report_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['report-service:8080']
+        labels:
+          application: 'Report Service Application'
+  - job_name: 'integration_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['integration-service:8080']
+        labels:
+          application: 'Integration Service Application'
+  - job_name: 'notification_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['notification-service:8080']
+        labels:
+          application: 'Notification Service Application'

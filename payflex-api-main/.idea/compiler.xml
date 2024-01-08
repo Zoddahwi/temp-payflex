@@ -22,10 +22,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="integration" options="-parameters" />
-      <module name="payflex-api-member" options="-parameters" />
-      <module name="payflex-api-payment" options="-parameters" />
-      <module name="payflex-api-report" options="-parameters" />
+      <module name="integration" options="" />
+      <module name="payflex-api-member" options="" />
+      <module name="payflex-api-payment" options="" />
+      <module name="payflex-api-report" options="" />
     </option>
   </component>
 </project>

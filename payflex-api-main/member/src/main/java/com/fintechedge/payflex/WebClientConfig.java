@@ -10,8 +10,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class WebClientConfig {
     @Bean
     public WebClient creatWebClient() {
-        return WebClient.builder().baseUrl("http://localhost:8080")
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+        return WebClient.builder().baseUrl("http://localhost:8081")
+                .defaultHeader(HttpHeaders.CONTENT_TYPE, String.valueOf(MediaType.APPLICATION_JSON))
                 .build();
     }
 }
