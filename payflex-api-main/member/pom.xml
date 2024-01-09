@@ -35,10 +35,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-integration</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-web</artifactId>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.integration</groupId>
 			<artifactId>spring-integration-http</artifactId>
@@ -67,30 +63,18 @@
 			<artifactId>spring-integration-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--        </dependency>-->
 
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 			<version>3.2.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webflux -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webflux</artifactId>
 			<version>6.1.2</version>
 		</dependency>
-
-
-		<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-webflux</artifactId>-->
-<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.integration</groupId>
@@ -102,20 +86,17 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.1.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webflux-ui -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -127,57 +108,36 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-
-
-
-
-		<!-- https://mvnrepository.com/artifact/io.r2dbc/r2dbc-spi -->
 		<dependency>
 			<groupId>io.r2dbc</groupId>
 			<artifactId>r2dbc-spi</artifactId>
 			<version>1.0.0.RELEASE</version>
 		</dependency>
 
-
-		<!--		 https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-r2dbc-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-r2dbc</artifactId>
 			<version>3.2.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>5.2.5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
 		</dependency>
 
-
-		<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-r2dbc &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-r2dbc</artifactId>-->
-<!--			<version>3.2.0</version>-->
-<!--		</dependency>-->
-
-
-		<!-- https://mvnrepository.com/artifact/org.postgresql/r2dbc-postgresql -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>r2dbc-postgresql</artifactId>
 			<version>1.0.0.RELEASE</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
