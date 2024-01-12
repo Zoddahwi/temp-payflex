@@ -16,7 +16,6 @@ import java.util.UUID;
 @RequestMapping("/api/v1/destination-bank")
 public class DestinationBankController {
 
-
     private final DestinationBankService destinationBankService;
     @Autowired
     public DestinationBankController(DestinationBankService destinationBankService) {

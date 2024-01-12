@@ -1,6 +1,7 @@
 package com.fintechedge.payflex.repository.setup;
 
 import com.fintechedge.payflex.model.setup.DestinationBank;
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 

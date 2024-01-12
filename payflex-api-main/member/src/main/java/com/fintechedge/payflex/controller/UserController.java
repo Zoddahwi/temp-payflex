@@ -48,7 +48,7 @@ public class UserController {
     @GetMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Find all users", description = "Returns a list of users")
-    Flux<User> findAll() {
+    public Flux<User> findAll() {
         return userService.findAll();
     }
 

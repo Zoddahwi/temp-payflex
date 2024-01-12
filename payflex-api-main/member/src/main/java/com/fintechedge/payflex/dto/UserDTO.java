@@ -24,6 +24,6 @@ public class UserDTO {
     private String salary;
     private String destinationTelco;
 
-//    public UserDTO(UUID uuid, String userId, String wise, String s, String mail) {
-//    }
+
+
 }

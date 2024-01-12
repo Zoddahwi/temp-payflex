@@ -41,9 +41,12 @@ public class User {
     @Column("destination_telco")
     private String destinationTelco;
 
-    public User(UUID uuid, String userId, String wise, String s, String mail) {
+
+    public User(String number, String john) {
+    }
+    public User(String newUser) {
+    }
+    public User(String nana, String afia, String number, String mail, String payflex, String number1, String number2, String gtb, String number3, String mtn) {
     }
 
-//    public User(UUID uuid, String userId, String wise, String s, String mail) {
-//    }
 }

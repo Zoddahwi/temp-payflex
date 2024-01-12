@@ -9,12 +9,21 @@ spring:
         defaultZone: http://localhost:8761/eureka/
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/postgres?schema=member
-    username: postgres
-    password: 1234
+    username: devpayflexuser
+    password: devpayflexpass
     driver: postgres
     name: postgres
     pool:
-      enabled: false
+      enabled: true
+      max-size: 20
+      initial-size: 1
+      max-idle-time: 30m
+      validation-query: SELECT 1
+    data:
+      r2dbc:
+        repositories:
+          enabled: true # Enable R2DBC repositories
+
   flyway:
     baseline-description: Baseline migration
     baseline-on-migrate: true

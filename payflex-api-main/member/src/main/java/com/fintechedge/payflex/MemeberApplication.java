@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 
 @SpringBootApplication
-@EnableR2dbcRepositories("com.fintechedge.payflex.repository")
+@EnableR2dbcRepositories
 @ComponentScan(basePackages = {"com.fintechedge.payflex"})
 public class MemeberApplication {
 
