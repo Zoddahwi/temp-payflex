@@ -7,44 +7,40 @@ spring:
     client:
       serviceUrl:
         defaultZone: http://localhost:8761/eureka/
+
+
+
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/postgres?schema=member
+    url: r2dbc:postgresql://localhost:5432/devpayflexdb?schema=member
     username: devpayflexuser
     password: devpayflexpass
-    driver: postgres
-    name: postgres
-    pool:
-      enabled: true
-      max-size: 20
-      initial-size: 1
-      max-idle-time: 30m
-      validation-query: SELECT 1
-    data:
-      r2dbc:
-        repositories:
-          enabled: true # Enable R2DBC repositories
 
   flyway:
-    baseline-description: Baseline migration
-    baseline-on-migrate: true
     enabled: true
-    driver-class-name: org.postgresql.Driver
     locations: classpath:db/migration
     schemas: member
-    url: jdbc:postgresql://localhost:5432/postgres
-    user: postgres
-    password: 1234
+    baseline-on-migrate: true
+    url: jdbc:postgresql://localhost:5432/devpayflexdb
+    user: devpayflexuser
+    password: devpayflexpass
 
-  #logging:
-  #  level:
-  #    sql: debug
-  #    web: debug
-  #    com:
-  #      example: DEBUG
-  #    name:
-  #      postgres:
-  #        r2dbc:
-  #          migrate: Trace
+
+#    data:
+#      r2dbc:
+#        repositories:
+#          enabled: true # Enable R2DBC repositories
+#    flyway:
+#      baseline-description: Baseline migration
+#      baseline-on-migrate: true
+#      enabled: true
+#      driver-class-name: org.postgresql.Driver
+#      locations: classpath:db/migration
+#      schemas: member
+#      url: jdbc:postgresql://localhost:5432/devpayflexdb
+#      user: devpayflexuser
+#      password: devpayflexpass
+
+
 
 
 

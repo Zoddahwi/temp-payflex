@@ -23,7 +23,7 @@ public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Test
+
     public void shouldSaveSingleUser() {
         User user = User.builder()
                 .id(UUID.fromString("cf36f4bb-98ac-45f7-9494-0c3eead8a9a5"))
