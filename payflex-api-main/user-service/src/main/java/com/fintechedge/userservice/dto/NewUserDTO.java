@@ -10,9 +10,11 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class NewUserDTO {
-    private String firstName;
-    private String lastName;
-    private String selectCompany;
-    private String email;
+    private String username;
+    private String firstname;
+    private String lastname;
+    private String selectcompany;
+    private String password;
+    private String emailId;
     private String staffId;
 }

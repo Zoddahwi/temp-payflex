@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS tbl_user (
     id uuid PRIMARY KEY UNIQUE DEFAULT uuid_generate_v4(),
     first_name varchar(255),
     last_name varchar(255),
-    staffId varchar(255),
+    staff_id varchar(255),
     email_address varchar(255),
     employer varchar(255),
     mobile_number varchar(255),
