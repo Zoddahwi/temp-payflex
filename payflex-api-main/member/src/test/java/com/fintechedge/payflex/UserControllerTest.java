@@ -61,7 +61,7 @@ public class UserControllerTest {
     @Test
     public void testCreateUser(){
 
-        UserDTO newUser = new UserDTO("Nana","Afia", "1","afia@gmail.com","Payflex","08012345678", "1234567890","GTB", "100000", "MTN");
+        UserDTO newUser = new UserDTO("Nana","hfsf","Afia", "1","afia@gmail.com","Payflex","08012345678", "1234567890","GTB", "100000", "MTN");
         User savedUser = new User("Nana","Afia", "1","afia@gmail.com","Payflex","08012345678", "1234567890","GTB", "100000", "MTN");
         when(userService.save(newUser)).thenReturn(Mono.just(savedUser));
 

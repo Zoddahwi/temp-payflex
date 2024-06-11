@@ -1,5 +1,8 @@
 server:
-  port: 8081
+  port: 9055
+#  servlet:
+#    context-path: '/member'
+
 spring:
   application:
     name: MEMBER-SERVICE  # This is the name of the service
@@ -24,6 +27,41 @@ spring:
     user: devpayflexuser
     password: devpayflexpass
 
+  kafka:
+      bootstrap-servers: localhost:29092
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: zodahwise@gmail.com
+    password: lhhi avbx tssd wzkd
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+infobip:
+  api:
+    key: ff6dcca587ac7c49a98af5ddedb36939-229743d2-35bd-44bb-a5e6-6993fb25fb70
+    base:
+      url: https://ggqgm6.api.infobip.com
+  username: ZoddahWi
+  password: Grace2crtnownow@
+
+
+
+
+#  kafka:
+#    security:
+#      protocol: SASL_PLAINTEXT
+#    bootstrap-servers: localhost:29092
+#    consumer:
+#      group-id: payflex-id
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
 
 #    data:
 #      r2dbc:
@@ -39,6 +77,9 @@ spring:
 #      url: jdbc:postgresql://localhost:5432/devpayflexdb
 #      user: devpayflexuser
 #      password: devpayflexpass
+logging:
+  level:
+    org.springframework.web: DEBUG
 
 
 

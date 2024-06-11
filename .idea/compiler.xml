@@ -7,10 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="integration (1) (com.fintechedge)" />
+        <module name="userservice" />
+        <module name="Kafka" />
+        <module name="google-ads" />
+        <module name="discovery-server" />
+        <module name="payflex-api-report (1) (com.fintechedge.report)" />
+        <module name="payflex-api-payment (1)" />
         <module name="integration" />
         <module name="api-gateway" />
+        <module name="member" />
+        <module name="payment (1) (com.fintechedge)" />
+        <module name="report" />
+        <module name="integration (1) (com.fintechedge.integration)" />
+        <module name="payment" />
         <module name="payflex-api-payment" />
-        <module name="discovery-server" />
         <module name="payflex-api-member" />
         <module name="payflex-api-report" />
       </profile>
@@ -22,13 +33,20 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="api-gateway" options="-parameters" />
+      <module name="Kafka" options="" />
+      <module name="api-gateway" options="" />
       <module name="apigateway" options="-parameters" />
-      <module name="discovery-server" options="-parameters" />
+      <module name="discovery-server" options="" />
+      <module name="google-ads" options="-parameters" />
       <module name="integration" options="-parameters" />
+      <module name="integration (1) (com.fintechedge.integration)" options="-parameters" />
       <module name="payflex-api-member" options="-parameters" />
       <module name="payflex-api-payment" options="-parameters" />
+      <module name="payflex-api-payment (1)" options="-parameters" />
       <module name="payflex-api-report" options="-parameters" />
+      <module name="payflex-api-report (1) (com.fintechedge.report)" options="-parameters" />
+      <module name="payment" options="" />
+      <module name="userservice" options="" />
     </option>
   </component>
 </project>

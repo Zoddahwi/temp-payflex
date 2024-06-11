@@ -29,10 +29,10 @@ public class TelcoImpl implements TelcoService{
     public Mono<Telco> save(Telco telco) {
         Telco telco1 = Telco.builder()
                 .telcoName(telco.getTelcoName())
+                .mobileTelcoId(UUID.randomUUID())
                 .description(telco.getDescription())
                 .build();
-        Mono<Telco> telcos = telcoRepository.save(telco1);
-        return telcos;
+        return telcoRepository.save(telco1);
     }
 
     @Override

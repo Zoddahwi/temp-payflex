@@ -27,6 +27,8 @@ public class DestinationBankImpl implements DestinationBankService {
     public Mono<DestinationBank> save(DestinationBank destinationBank) {
         DestinationBank destinationBank1 = DestinationBank.builder()
                 .destinationBankName(destinationBank.getDestinationBankName())
+                .bankName(destinationBank.getBankName())
+                .bankNameId(UUID.randomUUID())
                 .description(destinationBank.getDescription())
                 .build();
         return destinationBankRepository.save(destinationBank1);

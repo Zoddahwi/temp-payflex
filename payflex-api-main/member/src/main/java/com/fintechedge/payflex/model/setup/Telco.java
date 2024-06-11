@@ -19,6 +19,8 @@ import java.util.UUID;
 public class Telco {
     @Id
     private UUID id;
+    @Column("mobile_telco_id")
+    private UUID mobileTelcoId;
     @Column("telco_name")
     private String telcoName;
     @Column("description")

@@ -12,8 +12,9 @@ import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/v1/destination-bank")
+@RequestMapping("/api/v1/bank")
 public class DestinationBankController {
 
     private final DestinationBankService destinationBankService;

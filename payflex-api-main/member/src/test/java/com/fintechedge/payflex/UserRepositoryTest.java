@@ -30,12 +30,11 @@ public class UserRepositoryTest {
                 .firstName("John")
                 .lastName("Doe")
                 .staffId("123456")
-                .accountNumber("1234567890")
+                .accountId(UUID.fromString("1234567890"))
                 .emailAddress("afia@gmail.com")
-                .employer("Payflex")
+                .employerId("Payflex")
                 .mobileNumber("08012345678")
-                .destinationBank("GTB")
-                .destinationTelco("MTN")
+                .departmentId(UUID.fromString("134554"))
                 .salary("100000")
                 .build();
 

@@ -18,6 +18,10 @@ import java.util.UUID;
 public class DestinationBank {
     @Id
     private UUID id;
+    @Column("bank_name_id")
+    private UUID bankNameId;
+    @Column("bank_name")
+    private String bankName;
     @Column("destination_bank_name")
     private String destinationBankName;
     @Column("description")

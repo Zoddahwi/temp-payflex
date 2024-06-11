@@ -26,11 +26,11 @@ public class EmployerImpl implements EmployerService {
     @Override
     public Mono<Employer> save(Employer employer) {
         Employer employer1 = Employer.builder()
+                .employerId(UUID.randomUUID())
                 .employerName(employer.getEmployerName())
                 .description(employer.getDescription())
                 .build();
-        Mono<Employer> employers = employerRepository.save(employer1);
-        return employers;
+        return employerRepository.save(employer1);
     }
 
     @Override

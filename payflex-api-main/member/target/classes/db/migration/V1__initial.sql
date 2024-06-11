@@ -3,20 +3,25 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 ALTER EXTENSION "uuid-ossp" SET SCHEMA "member";
 
 CREATE TABLE IF NOT EXISTS tbl_user (
-    id uuid PRIMARY KEY UNIQUE DEFAULT uuid_generate_v4(),
-    first_name varchar(255),
-    last_name varchar(255),
-    staff_id varchar(255),
-    email_address varchar(255),
-    employer varchar(255),
-    mobile_number varchar(255),
-    account_number varchar(255),
-    destination_bank varchar(255),
-    salary varchar(255),
-    destination_telco varchar(255),
-    created_at timestamp default current_timestamp,
-    updated_at timestamp default current_timestamp
+        id uuid PRIMARY KEY UNIQUE DEFAULT member.uuid_generate_v4(),
+        first_name VARCHAR(255),
+        middle_name VARCHAR(255),
+        last_name VARCHAR(255),
+        staff_id VARCHAR(255),
+        email_address VARCHAR(255) UNIQUE NOT NULL,
+        employerId VARCHAR(255),
+        mobile_number VARCHAR(255) UNIQUE,
+        salary VARCHAR(255),
+        email_verified BOOLEAN,
+        mobile_verified BOOLEAN,
+        account_approved BOOLEAN,
+        department_id UUID,
+        account_id UUID,
+        created_at timestamp default current_timestamp,
+        updated_at timestamp default current_timestamp
+
 );
+
 
 
 

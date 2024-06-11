@@ -12,8 +12,9 @@ import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping(value = "/telco")
+@RequestMapping(value = "/api/v1/telco")
 public class TelcoController {
 
     private final TelcoService telcoService;

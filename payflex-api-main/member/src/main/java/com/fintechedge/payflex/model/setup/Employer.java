@@ -17,6 +17,8 @@ import java.util.UUID;
 public class Employer {
     @Id
     private UUID id;
+    @Column("employer_id")
+    private UUID employerId;
     @Column("employer_name")
     private String employerName;
     @Column("description")

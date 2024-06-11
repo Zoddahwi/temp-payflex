@@ -4,36 +4,78 @@ spring:
   application:
     name: API-GATEWAY
   cloud:
-    gateway:
+   gateway:
       routes:
-        - id: ops-user-service
-          uri: lb://OPS-USER-SERVICE
+        - id: user-service
+          uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/v1/user-service/**
-        - id: ops-member-service
-          uri: lb://OPS-MEMBER-SERVICE
+            - Path=/api/v1/auth/**
+        - id: member-service
+          uri: lb://MEMBER-SERVICE
           predicates:
-            - Path=/api/v1/member-service/**
+            - Path=/api/v1/user/**
         - id: discovery-service
           uri: lb://DISCOVERY-SERVICE
           predicates:
             - Path=/api/v1/discovery-service/**
-        - id: ops-api-gateway
-          uri: lb://OPS-API-GATEWAY
+        - id: api-gateway
+          uri: lb://API-GATEWAY
           predicates:
             - Path=/api/v1/api-gateway/**
-        - id: ops-payment-service
-          uri: lb://OPS-PAYMENT-SERVICE
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/api/v1/payment-service/**
-        - id: ops-report-service
-          uri: lb://OPS-REPORT-SERVICE
+        - id: report-service
+          uri: lb://REPORT-SERVICE
           predicates:
             - Path=/api/v1/report-service/**
         - id: integration-service
           uri: lb://INTEGRATION-SERVICE
           predicates:
             - Path=/api/v1/integration-service/**
+
+  spring.cloud.gateway:
+    discovery:
+      locator:
+        enabled: true
+        lower-case-service-id: true
+
+  logging:
+    level:
+      org.springframework.cloud.gateway: TRACE
+
+#   dns:
+#     cloudflare:
+#       enabled: true
+#     google:
+#       enabled: true
+#       order: 1
+#       servers:
+#         - 8.8.8.8
+#         - 8.8.4.4
+#
+#     inet-utils:
+#       ignoredInterfaces:
+#         - eth0
+#         - eth1
+#         - eth2
+#         - eth3
+#       preferredNetworks:
+#         - 192.168
+#         - 10.0
+
+#    inet-utils:
+#      ignoredInterfaces:
+#        - eth0
+#        - eth1
+#        - eth2
+#        - eth3
+#      preferredNetworks:
+#        - 192.168
+#        - 10.0
+#        - 172.24
+#        - 169.254
 
 eureka:
   client:

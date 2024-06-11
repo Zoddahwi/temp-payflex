@@ -7,9 +7,8 @@ import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 
 @SpringBootApplication
 @EnableR2dbcRepositories
-@ComponentScan(basePackages = {"com.fintechedge.payflex"})
+@ComponentScan(basePackages = {"com.fintechedge.payflex" , "com.fintechedge.kafka.service.email"})
 public class MemeberApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(MemeberApplication.class, args);
 	}

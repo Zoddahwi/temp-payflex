@@ -12,8 +12,9 @@ import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping(value = "/employer")
+@RequestMapping(value = "/api/v1/employer")
 public class EmployerController {
 
     private final EmployerService employerService;

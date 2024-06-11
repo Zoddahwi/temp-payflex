@@ -1,15 +1,13 @@
 package com.fintechedge.payflex.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fintechedge.payflex.model.setup.Account;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.UUID;
-
 
 @Table("tbl_user")
 @Data
@@ -22,31 +20,33 @@ public class User {
     private UUID id;
     @Column("first_name")
     private String firstName;
+    @Column("middle_name")
+    private String middleName;
     @Column("last_name")
     private String lastName;
     @Column("staff_id")
     private String staffId;
     @Column("email_address")
     private String emailAddress;
-    @Column("employer")
-    private String employer;
+    @Column("employerId")
+    private String employerId;
     @Column("mobile_number")
     private String mobileNumber;
-    @Column("account_number")
-    private String accountNumber;
-    @Column("destination_bank")
-    private String destinationBank;
     @Column("salary")
     private String salary;
-    @Column("destination_telco")
-    private String destinationTelco;
-
-
-    public User(String number, String john) {
-    }
-    public User(String newUser) {
-    }
-    public User(String nana, String afia, String number, String mail, String payflex, String number1, String number2, String gtb, String number3, String mtn) {
-    }
+    @Column("email_verified")
+    private boolean emailVerified;
+    @Column("mobile_verified")
+    private boolean mobileVerified;
+    @Column("account_approved")
+    private boolean accountApproved;
+    @Column("department_id")
+    private UUID departmentId;
+    @Column("account_id")
+    @Getter
+    @Setter
+    private UUID accountId;
+    @Column("account")
+    private Account account;
 
 }

@@ -2,5 +2,16 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V1__initial.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V2__employer.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V3__telco.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V4__bdestination.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V5__otp.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V6__account.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/member/src/main/resources/db/migration/V7__department.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/userservice/src/main/resources/db.migration/V1__users.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/userservice/src/main/resources/db.migration/V2__tokens.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/userservice/src/main/resources/db.migration/V3__resetpasstoken.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/userservice/src/main/resources/db.migration/V4__verification_token.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/payflex-api-main/userservice/src/main/resources/db.migration/V5__otpnewuser.sql" dialect="PostgreSQL" />
   </component>
 </project>
